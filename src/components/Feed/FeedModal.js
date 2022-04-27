@@ -6,7 +6,7 @@ import Loading from '../Helper/Loading';
 import PhotoContent from '../Photo/PhotoContent';
 import styles from './FeedModal.module.css';
 
-const FeedModal = ({ photo }) => {
+const FeedModal = ({ photo, setModalPhoto }) => {
   const { data, error, loading, request } = useFetch();
 
   React.useEffect(() => {
@@ -14,8 +14,13 @@ const FeedModal = ({ photo }) => {
     request(url, options);
   }, [photo, request]);
 
+  function handleOutsideClick(e) {
+    if (e.target === e.currentTarget) {
+      setModalPhoto(null);
+    }
+  }
   return (
-    <div className={styles.modal}>
+    <div className={styles.modal} onClick={handleOutsideClick}>
       {error && <Error error={error} />}
       {loading && <Loading />}
       {data && <PhotoContent data={data} />}
