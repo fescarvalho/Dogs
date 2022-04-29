@@ -11,7 +11,7 @@ const Feed = ({ user }) => {
     let wait = false;
     function infiniteScroll() {
       if (infinite) {
-        const scroll = window.screenY;
+        const scroll = window.scrollY;
         const height = document.body.offsetHeight - window.innerHeight;
 
         if (scroll > height * 0.75 && !wait) {
