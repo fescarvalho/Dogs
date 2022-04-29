@@ -8,6 +8,7 @@ import { UserStorage } from './UserContext';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import User from './Components/User/User';
 import ProtectedRoute from './Components/Helper/ProtectedRoute';
+import Photo from './Components/Photo/Photo';
 
 const App = () => {
   return (
@@ -18,12 +19,15 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="login/*" element={<Login />} />
-            <Route 
-              path="conta/*" 
+            <Route
+              path="conta/*"
               element={
-              <ProtectedRoute> 
-                <User />
-              </ProtectedRoute>}  />
+                <ProtectedRoute>
+                  <User />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="foto/:id" element={<Photo />} />
           </Routes>
           <Footer />
         </UserStorage>
