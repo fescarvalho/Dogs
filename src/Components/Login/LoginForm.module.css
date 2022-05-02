@@ -38,3 +38,9 @@
   width: 3rem;
   border-radius: 0.2rem;
 }
+
+@media (max-width: 40rem) {
+  .cadastro {
+    margin-top: 2rem;
+  }
+}
