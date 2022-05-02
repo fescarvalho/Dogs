@@ -73,7 +73,6 @@ export function PHOTO_GET(id) {
     url: `${API_URL}/api/photo/${id}`,
     options: {
       method: 'GET',
-      cache: 'no-store',
     },
   };
 }

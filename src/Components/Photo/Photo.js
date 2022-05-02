@@ -21,9 +21,8 @@ const Photo = () => {
   if (data)
     return (
       <section className="container mainContainer">
-        <Head title={data.foto.title} />
+        <Head title={data.photo.title} />
         <PhotoContent single={true} data={data} />
-        {id}
       </section>
     );
   else return null;
