@@ -5,6 +5,7 @@ import PhotoContent from '../Photo/PhotoContent';
 import Loading from '../Helper/Loading';
 import { PHOTO_GET } from '../../Api';
 import useFetch from '../../Hooks/useFetch';
+import Head from '../Helper/Head';
 
 const Photo = () => {
   const { id } = useParams();
@@ -20,6 +21,7 @@ const Photo = () => {
   if (data)
     return (
       <section className="container mainContainer">
+        <Head title={data.foto.title} />
         <PhotoContent single={true} data={data} />
         {id}
       </section>
