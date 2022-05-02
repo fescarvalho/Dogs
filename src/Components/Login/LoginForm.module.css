@@ -4,13 +4,13 @@
 .perdeu {
   display: inline-block;
   color: #666;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   line-height: 1;
 }
 
 .perdeu::after {
-  content: "";
-  height:2px;
+  content: '';
+  height: 2px;
   width: 100%;
   background: currentColor;
   display: block;
@@ -20,22 +20,21 @@
   margin-top: 4rem;
 }
 .cadastro p {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .subtitle {
   font-family: var(--type-second);
   line-height: 1;
-  font-size:2rem;
-
+  font-size: 2rem;
 }
 
 .subtitle::after {
-  content: "";
+  content: '';
   display: block;
   background: #ddd;
-  height:.5rem;
-  width:3rem;
-  border-radius: .2rem;
+  height: 0.5rem;
+  width: 3rem;
+  border-radius: 0.2rem;
 }
